@@ -34,9 +34,15 @@ Welcome to the SQL Sales Data Analysis Project! This repository is dedicated to 
 - `/documentation/`
   - `data_dictionary.md` - Details about data columns and types
   - `er_diagram.png` - Entity relationship diagram
+
 - `/outputs/`
-  - `aggregated_sales_by_region.csv`
-  - `top_performing_products.csv`
+  - `aggregated_sales_by_category.csv`
+  - `top_performing_subcategories.csv`
+  - `combined_sales_metrics_summary`
+  - `monthly_sales_growth_summary`
+  - `customer_top_category_summary`
+  - `customer_order_data_summary`
+
 
 
 # SQL Sales Data Analysis 
@@ -74,6 +80,10 @@ Welcome to the SQL Sales Data Analysis Project! This repository is dedicated to 
 8. **Customer's Most Purchased Category** 
    - Overview: Identifying the top-purchased category for each customer.
    - SQL Insight: [Complex SQL query using CTE `CustomerCategoryPurchase` and the main ranking.]
+
+9. **Top Performing Sub Categories**
+   -  Overview: Lists the sub-categories in descending order based on their total sales, and also provides the main category each sub-category belongs to.
+   -  SQL Insight: `SELECT cat.Category_Name, subcat.Sub_Category_Name, SUM(od.Amount) AS Total_Sales FROM Order_Details od ...`
 
 By diving deep into these metrics, we aim to decode sales performance, understand customer behaviors, and highlight product/category strengths. These insights are invaluable for guiding business strategies, optimizing sales efforts, and crafting effective marketing campaigns.
 
