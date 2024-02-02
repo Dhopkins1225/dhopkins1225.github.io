@@ -27,6 +27,8 @@ Feel free to explore the projects that interest you the most, and don't hesitate
 
 - **Predictive Modeling:** Demonstrating how I utilize machine learning techniques to build predictive models that can aid in forecasting and decision-making.
 
+- **Financial Modeling and Analysis:** Construct detailed financial models and conduct thorough financial analysis. This includes leveraging data to forecast financial outcomes, assess financial health, and support strategic decision-making. My work demonstrates not just my ability to manage and analyze large datasets, but also my capacity to derive actionable financial insights from complex data, essential for guiding business strategies and investments.
+
 ## Repository Structure
 
 Each project is contained in its own directory within this repository. In each project directory, you'll find detailed documentation and code that walk you through the entire data analysis process. This includes data sourcing, data cleaning, exploratory analysis, visualization, modeling (if applicable), and the final insights derived from the project.
