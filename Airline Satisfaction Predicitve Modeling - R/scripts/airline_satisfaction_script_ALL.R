@@ -1,18 +1,7 @@
-###################################
-### Group Name: Worker Bees     ###
-### Maryam Ali                  ###
-### Connor Doyle                ###
-### Douglas Hopkins             ###
-### Abraham Ibanez Garcia       ###
-### April Kiyabu                ###
-### Zahra Tahmasebi             ###
-### Fall 2022 ISDS 574 - 59     ###
-### Group Project               ###
-###################################
 
 ## Environment Setup
 # Path to the directory will need to be updadted depending on your own machine
-setwd('C:/Users/dhopk/Desktop/Grad School/CSUF/2022/Fall 2022/ISDS 574/Group Project/Airline Passenger Satisfaction Dataset')
+setwd('C:/Desktop/Airline Passenger Satisfaction Dataset')
 require(tidyr)
 library(forecast)
 library(dplyr)
