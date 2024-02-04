@@ -1,88 +1,50 @@
-# Airline Customer Satisfaction Analysis Project
+# Airline Customer Satisfaction Analysis Project Summary
 
-Welcome to the Airline Customer Satisfaction Analysis Project repository! This project leverages R programming to deeply analyze airline customer satisfaction, focusing on predictive modeling to understand and enhance the passenger experience.
+Welcome to the comprehensive summary of the Airline Customer Satisfaction Analysis Project. This project, conducted using R, focuses on unraveling the factors that influence passenger satisfaction in the airline industry, aiming to enhance the overall passenger experience through data-driven insights.
 
-## Project Overview
+## Project Scope
 
-This initiative employs data preparation, exploratory data analysis (EDA), logistic regression, and predictive analytics techniques. The goal is to pinpoint critical factors that influence customer satisfaction and identify areas for service improvement within the airline industry.
+The project encompasses several stages of data analysis, from initial data preparation and exploratory analysis to the application of advanced predictive modeling techniques. The core objective is to identify key drivers of customer satisfaction and pinpoint opportunities for service improvement.
 
-## Environment Setup
+## Analytical Methods Employed
 
-The analysis harnesses the power of R and several essential packages:
+### Data Preparation
 
-- `tidyr` for data cleaning,
-- `forecast` for time series analysis,
-- `dplyr` for data manipulation,
-- `caret` for modeling and prediction.
+Utilizing R's robust packages (`tidyr`, `dplyr`, etc.), the project begins with thorough data cleaning and preparation, transforming raw datasets into a structured format suitable for analysis.
 
-## Data Preparation and Cleaning
+### Predictive Modeling Techniques
 
-Data is meticulously prepared through the following processes:
+The project leverages a trio of predictive modeling techniques to explore various aspects of customer satisfaction:
 
-- Loading from `train.csv` and `test.csv`.
-- NA values are eliminated to ensure data integrity.
-- Transformation of categorical variables into dummy variables for analytical readiness.
+- **Logistic Regression**: Applied to develop models predicting satisfaction based on booking details, post-flight experiences, and in-flight services.
+- **K-Nearest Neighbors (KNN)**: Utilized to model customer satisfaction with different configurations, adjusting for data peculiarities such as "too many ties" by employing the "brute" search algorithm.
+- **Classification Trees**: Employed to identify the most influential variables affecting satisfaction, with models tailored to different stages of the customer journey and service aspects.
 
-## Logistic Regression Analysis
+## Key Findings
 
-The project constructs several logistic regression models to predict customer satisfaction:
+- **Influential Factors**: The analysis highlights critical factors impacting satisfaction, including in-flight services, booking convenience, and operational aspects like delays.
+- **Model Performance**:
+  - **KNN** showed remarkable accuracy, particularly in the full model, with specific configurations optimized for different scenarios.
+  - **Classification Trees** provided nuanced insights into variable importance across models, demonstrating notable accuracy.
+  - **Logistic Regression** offered significant predictors across various models, with tailored adjustments enhancing model accuracy.
 
-- **Booking Model**: Determines satisfaction likelihood at booking, leveraging variables like loyalty status, business travel, and class of service.
-- **Follow-up Model**: Incorporates variables like departure and arrival delays to predict post-flight satisfaction.
-- **Prescriptive Model**: Targets in-flight and operational services to recommend enhancements.
+### Model Insights
 
-## Insights and Findings
+- **KNN Analysis**: Achieved the highest overall accuracy in the full model, with specific neighbor configurations yielding optimal results for the booking, follow-up, and prescriptive models.
+- **Classification Trees**: Emerged as the most effective method, especially for targeted models like booking and follow-up, by accurately identifying key variables.
+- **Logistic Regression**: Provided a solid foundation for predictive analysis, with all variables showing significance and contributing to a comprehensive understanding of satisfaction drivers.
 
-- Significant factors impacting customer satisfaction are highlighted.
-- Recommendations are provided on which airline services should be improved to boost satisfaction levels.
-- Models are evaluated for their predictive performance, offering insights into their effectiveness.
+## Strategic Implications
 
-## Models and Predictive Analytics
+The analysis underscores the complexity of customer satisfaction in the airline industry, suggesting a multifaceted approach to enhancing service quality. Classification trees, in particular, stood out for their ability to distill actionable insights from complex datasets.
 
-- **Booking and Follow-up Models**: Utilize logistic regression for early satisfaction prediction, facilitating proactive engagement strategies.
-- **Prescriptive Model**: Guides airline service prioritization for customer satisfaction improvement.
+## Future Directions
 
-## Additional Analyses
+- **Data Enrichment**: Additional data collection is advocated, especially to refine the booking and follow-up models.
+- **Demographic Analysis**: Further examination of passenger demographics could bolster the reliability and applicability of the predictive models.
 
-- Evaluation of model accuracy through misclassification rates.
-- Exploration of dimension reduction and classification trees for enriched insights.
-- Application of correlation heatmaps and data normalization for a comprehensive data understanding.
+## Conclusion
 
-This repository includes all necessary scripts, data files, and documentation for a full comprehension and replication of the analysis, providing a robust framework for exploring airline customer satisfaction through data-driven methodologies.
+This project illustrates the power of combining different analytical methods to dissect and understand airline customer satisfaction. The findings not only highlight the critical areas for service enhancement but also pave the way for implementing targeted improvements based on predictive insights.
 
-## Results Summary
-
-### KNN Analysis
-- **Full Model**: Achieved the highest accuracy at 96.59% with k = 5.
-- **Booking Model**: Best accuracy at 77.69% with k = 4.
-- **Follow-Up Model**: Revealed 76.56% accuracy with k = 22.
-- **Prescriptive Model**: Attained 91.80% accuracy with k = 7.
-- A cutoff of 50% was consistently used across all KNN models.
-
-### Classification Trees
-- **Full Model**: Demonstrated 88.40% accuracy.
-- **Booking and Follow-Up Models**: Both showed 77.90% accuracy, with 14% false negatives and 9% false positives.
-- **Prescriptive Model**: Exhibited 86.20% accuracy, with 8% false negatives and 6% false positives.
-- All models used a cutoff of 50%.
-
-### Logistic Regression
-- **Full Model**: Excluded Flight Distance, all variables significant (p < 0.05).
-- **Booking Model**: All predictors significant with 77.91% accuracy.
-- **Follow-Up Model**: Achieved 78.16% accuracy, all variables significant.
-- **Prescriptive Model**: Presented 81.34% accuracy, with all variables significant.
-
-### Choosing the Best Method
-Classification trees emerged as the most effective method for the booking, follow-up, and prescriptive models, despite KNN showing higher performance in the full model analysis.
-
-## Conclusions
-
-- **Effectiveness of Classification Trees**: Proved to be the most accurate method, especially for booking and follow-up models.
-- **Importance of Variables**: Similar key variables influenced both booking and follow-up model accuracies, suggesting a need for additional differentiating factors.
-- **Misclassification Insights**: Higher false negatives in the booking and follow-up models indicate a tendency to underestimate passenger satisfaction.
-- **Prescriptive Model's Superiority**: Demonstrated the highest accuracy among classification models, with a balanced rate of false negatives and positives.
-- **Future Recommendations**: Additional data collection is recommended to enhance model accuracy, particularly for booking and follow-up scenarios. The analysis also highlights the importance of assessing passenger demographics to ensure model reliability.
-
-This project underscores the complex nature of predicting airline customer satisfaction and the potential of classification trees in providing actionable insights. Despite expectations around logistic regression, the adaptability of classification trees to the data proved more decisive in accuracy. Future analyses could benefit from a broader dataset encompassing a more diverse passenger demographic to further refine and validate the models.
-
-
-**Note**: For a detailed exploration of the methodologies and findings, please refer to the R scripts located in the `/scripts/` directory of this repository.
+**Further Exploration**: For an in-depth review of the methodologies and detailed findings, please refer to the R scripts in the `/scripts/` directory of this repository.

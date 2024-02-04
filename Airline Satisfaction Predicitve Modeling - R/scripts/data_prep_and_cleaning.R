@@ -2,7 +2,7 @@
 
 ## Environment Setup
 # Setting the working directory to where the dataset is located
-setwd('C:/Users/dhopk/Desktop/Grad School/CSUF/2022/Fall 2022/ISDS 574/Group Project/Airline Passenger Satisfaction Dataset')
+setwd('C:/Desktop/Airline Passenger Satisfaction Dataset')
 
 # Loading necessary libraries
 require(tidyr)

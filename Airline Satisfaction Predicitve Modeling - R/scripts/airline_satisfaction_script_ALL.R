@@ -76,50 +76,7 @@ log_reg <- glm(is.Satisfied ~ ., data =
                , family = 'binomial')
 options(scipen = 999)
 summary(log_reg)
-# This full model can help determine prescriptive policies to help improve 
-# customer satisfaction in the future. Some of these variables would be 
-# unknown to the airline until after they survey the customer. Examples of 
-# such variables are:
-# In flight WiFi service
-# Departure/Arrival time convenient
-# Ease of Online booking
-# Food and drink
-# Online boarding
-# Seat comfort
-# In flight entertainment
-# On-board service
-# Leg room service
-# Baggage handling
-# Check-in service
-# In flight service
-# Cleanliness
-# Gate.location
-# Modeling based on these variables would allow the airline to determine 
-# what services they need to focus on the most to boost customer satisfaction.
-# Some other variables may not be known until the shortly before or after the 
-# flight. Examples of such variables are:
-# Departure.Delay.in.Minutes
-# Arrival.Delay.in.Minutes
-# Though these variables may be out of the airline's control, they can still
-# be leveraged to determine if a follow-up campaign needs to be put in place 
-# to mitigate unsatisfied customers based on circumstances that arise on the 
-# date of the flight. 
-# The remaining variables can be used to predict customer satisfaction in 
-# advance of the flight since the value to these variables are likely known to
-# the airline as early as when the customer books the flight. 
 
-# I propose that we build 3 models:
-# Booking model:
-# This model is to be used to assign a satisfaction likelihood to each 
-# customer as soon as they book the flight. 
-# Follow-up model:
-# This model is to be used to assign a satisfaction likelihood to each 
-# customer shortly after the flight lands. This will allow the airline 
-# to be proactive in contacting customers that are likely to be 
-# unsatisfied due to the events that occurred the day of the flight.
-# Prescriptive model:
-# This model is to be used to determine what aspects of the services 
-# provided by the airline need to be improved. 
 
 ## Booking model
 log_reg_b <- glm(is.Satisfied ~ ., data = 
@@ -249,7 +206,6 @@ confusionMatrix(as.factor(prescriptive_pred_50), as.factor(test$is.Satisfied),
                 dnn = c('Prediction', 'Actuals')) #Accuracy : 0.8134 
 
 
-#Group Project Extra Work
 
 
 #Misclassification rates 
